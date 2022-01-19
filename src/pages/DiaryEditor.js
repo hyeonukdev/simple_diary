@@ -1,5 +1,5 @@
-import "./DiaryEditor.css";
 import { useRef, useState } from "react";
+import "./DiaryEditor.css";
 
 const DiaryEditor = () => {
   const authorInput = useRef();
