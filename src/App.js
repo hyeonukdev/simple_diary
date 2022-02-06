@@ -61,15 +61,13 @@ const App = () => {
     if (data.length === 0) {
       return { goodcount: 0, badCount: 0, goodRatio: 0 };
     }
-    console.log("일기 분석 시작");
-
     const goodCount = data.filter((it) => it.emotion >= 3).length;
     const badCount = data.length - goodCount;
     const goodRatio = parseFloat(
       Math.round((goodCount / data.length) * 100.0 * 100) / 100
     ).toFixed(1);
     return { goodCount, badCount, goodRatio };
-  }, [data.length]);
+  }, [data]);
 
   const { goodCount, badCount, goodRatio } = getDiaryAnalysis;
 

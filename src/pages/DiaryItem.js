@@ -17,7 +17,7 @@ const DiaryItem = ({
   const toggleIsEdit = () => setIsEdit(!isEdit);
 
   const handleClickRemove = () => {
-    if (window.confirm(`${id}번째 일기를 정말 삭제하시겠습니까?`)) {
+    if (window.confirm(`${id + 1}번째 일기를 정말 삭제하시겠습니까?`)) {
       onRemove(id);
     }
   };
@@ -33,7 +33,7 @@ const DiaryItem = ({
       return;
     }
 
-    if (window.confirm(`${id}번 째 일기를 수정하시겠습니까?`)) {
+    if (window.confirm(`${id + 1}번 째 일기를 수정하시겠습니까?`)) {
       onEdit(id, localContent);
       toggleIsEdit();
     }
@@ -42,6 +42,7 @@ const DiaryItem = ({
   return (
     <div className="DiaryItem">
       <div className="info">
+        <span className="num">번호 : {id + 1}</span>
         <span className="author_info">
           작성자 : {author} | 감정 : {emotion}
         </span>
