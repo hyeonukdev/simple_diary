@@ -1,7 +1,6 @@
 import { useRef, useState, useEffect, useMemo } from "react";
 import DiaryEditor from "./pages/DiaryEditor";
 import DiaryList from "./pages/DiaryList";
-import OptimizeTest from "./optimizeTest";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -74,7 +73,6 @@ const App = () => {
 
   return (
     <div className="App">
-      <OptimizeTest />
       <DiaryEditor onCreate={onCreate} />
       <div>전체 일기 : {data.length}</div>
       <div>기분 좋은 일기 개수 : {goodCount}</div>
