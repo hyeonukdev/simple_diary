@@ -1,4 +1,5 @@
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
+import { useEffect } from "react/cjs/react.development";
 import "./DiaryItem.css";
 
 const DiaryItem = ({
@@ -11,6 +12,10 @@ const DiaryItem = ({
   created_date,
   onDelete,
 }) => {
+  useEffect(() => {
+    console.log(`${id}번째 Render`);
+  });
+
   const localContentInput = useRef();
   const [localContent, setLocalContent] = useState(content);
   const [isEdit, setIsEdit] = useState(false);
@@ -76,4 +81,4 @@ const DiaryItem = ({
     </div>
   );
 };
-export default DiaryItem;
+export default React.memo(DiaryItem);
