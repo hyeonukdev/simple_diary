@@ -1,11 +1,4 @@
-import {
-  useRef,
-  useState,
-  useEffect,
-  useMemo,
-  useCallback,
-  useReducer,
-} from "react";
+import { useRef, useEffect, useMemo, useCallback, useReducer } from "react";
 import DiaryEditor from "./pages/DiaryEditor";
 import DiaryList from "./pages/DiaryList";
 
